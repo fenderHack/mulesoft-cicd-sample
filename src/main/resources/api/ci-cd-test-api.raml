@@ -1,0 +1,21 @@
+#%RAML 1.0
+title: CI CD TEST
+version: v1
+
+/test:
+  post:
+   body:
+    application/json:
+      example:
+        {
+          "nom": "konan"
+        }
+   responses:
+    200:
+      body:
+        application/json:
+          example:
+            {
+              "hasError": false
+            }
+        
