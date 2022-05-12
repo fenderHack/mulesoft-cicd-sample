@@ -136,4 +136,17 @@ output application/json
             </ee:message>
         </ee:transform>
     </flow>
+    <flow name="post:\test2:application\json:ci-cd-test-api-config">
+        <ee:transform>
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  hasError: false,
+  description: "ok"
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
 </mule>

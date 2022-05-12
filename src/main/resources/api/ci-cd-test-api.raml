@@ -1,5 +1,5 @@
 #%RAML 1.0
-title: CI CD TEST
+title: ci-cd-test-api
 version: v1
 
 /test:
@@ -17,5 +17,24 @@ version: v1
           example:
             {
               "hasError": false
+            }
+            
+            
+/test2:
+  post:
+   body:
+    application/json:
+      example:
+        {
+          "nom": "konan"
+        }
+   responses:
+    200:
+      body:
+        application/json:
+          example:
+            {
+              "hasError": false,
+              "description": "ok"
             }
         
